@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Contacts Téléphoniques</title>
+    <script type="text/javascript" src="cordova.js"> </script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="jquery/jquery.min.js"></script>
+    <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/index.js"></script>
+    
+</head>
+
+<body> 
+
+    <!--PAGE D'ACCUEIL-->
+    <div id="showContactPage" data-role="page">
+        <div data-role="header" class="head">
+            <a href="#addContactPage" data-role="button" class="ui-btn-right" data-icon="plus" data-iconpos="notext">Nouveau</a>
+        </div>
+
+        <div role="main" class="ui-content ui-main">
+            <ul id="ListeContact" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Rechercher un Contact">
+               
+
+             </ul>
+        </div>
+
+        <div data-role="footer" class="foot" data-position="fixed">
+            <h1>  Contacts&copy;2022</h1>
+        </div>
+    </div>
+    <!--DEUXIEME PAGE AJOUT D'UN NOUVEAU CONTACT-->
+
+    <div id="addContactPage" data-role="page">
+        <div data-role="header" class="head">
+            <a class="ui-btn-left" href="#showContactPage" data-icon="home" data-iconpos="notext"> Retour</a>
+        </div>
+        <div role="main" class="ui-content ui-main">
+            <div data-role="header">
+                <h1>Nouveau contact</h1>
+            </div>
+                <form>
+                    <input type="text" id="NomComplet" placeholder="Nom complet">
+                    <input type="tel" id="telephone" placeholder="Téléphone">
+                    <input type="email" id="email" placeholder="Adresse Email">
+                    <input type="text" id="adresse" placeholder="Adresse">
+                    <button id="AjouterContact" data-icon="plus">Ajouter</button>
+                </form>
+                          
+        </div>
+        <div data-role="footer" class="foot" data-position="fixed">
+            <h1>  Contacts&copy;2022</h1>
+        </div>
+       
+    </div>
+
+    <!--TROISIEME PAGE POUR VOIR LES INFOS DU CONTACT SELECTIONNE-->
+    <div id="showContactInfos" data-role="page">
+        <div data-role="header" class="head">
+            <a class="ui-btn-left" href="#showContactPage" data-icon="home" data-iconpos="notext"> Retour</a>
+        </div>
+        <div role="main" class="ui-content ui-main">
+            <div data-role="header">
+                <h1>Infos du contact</h1>
+                <button data-icon="edit" id="showEdit" class="ui-btn-left" data-iconpos="notext">Modifier</button>
+                <button data-icon="delete" id="delete" class="ui-btn-right" data-iconpos="notext">Suprrimer</button>
+            </div>
+
+            <ul id="contactShow" data-role="listview" data-inset="true">
+               
+
+            </ul>
+            <form class="formulaire">
+                <input type="text" id="newNomComplet" placeholder="Nom complet">
+                <input type="tel" id="newTelephone" placeholder="Téléphone">
+                <input type="email" id="newEmail" placeholder="Adresse Email">
+                <input type="text" id="newAdresse" placeholder="Adresse">
+                <button data-icon="edit" id="edit">Modifier</button>
+            </form>
+            
+            
+        </div>
+        <div data-role="footer" class="foot" data-position="fixed">
+            <h1>  Contacts&copy;2022</h1>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
